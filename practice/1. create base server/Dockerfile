@@ -10,6 +10,8 @@
 # 베이스 이미지 설정
 FROM node:22-slim
 
+VOLUME ["/ballboy"]
+
 # 라이브러리 설치
 WORKDIR /app
 
@@ -28,7 +30,7 @@ CMD ["node", "server.js"]
 # ENTRYPOINT ["node", "server.js"]
 
 # 이미지 생성
-# docker build -t nodeserver:1.0.0
+# docker build -t nodeserver:test .
 
 # 컨테이너 실행
-# docker run -p 8080:8080 nodeserver:1.0.0
+# docker run -p 8080:8080 nodeserver:test
